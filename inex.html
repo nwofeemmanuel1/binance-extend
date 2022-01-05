@@ -1,0 +1,176 @@
+<style>
+    @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700&display=swap');
+
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        font-family: "Poppins", sans-serif;
+    }
+
+    @keyframes showView {
+        from {
+
+
+            opacity: 0;
+        }
+
+        to {
+
+            opacity: 1;
+        }
+    }
+
+
+    .serverQuestionModal {
+        animation-name: showView;
+        animation-duration: 1s;
+        animation-iteration-count: 1;
+        animation-direction: forwards;
+        position: fixed;
+        width: 500px;
+        height: 300px;
+        padding: 10px;
+        border: 1px solid #fff;
+        background-color: #f4f9ff;
+        top: 40%;
+        left: 50%;
+        margin-top: -100px;
+        margin-left: -250px;
+        z-index: 2;
+        /* display: none; */
+    }
+
+
+    .serverQuestionModal h1 {
+        font-size: 23px;
+        text-align: center;
+        color: rgb(235, 164, 0);
+        padding: 5px;
+    }
+
+    .serverQuestionModal>div input {
+        display: flex;
+        align-self: center;
+        padding: 8px 12px;
+        margin: auto;
+        margin-top: 5px;
+        text-align: center;
+        border-radius: 10px;
+        border-color: gray;
+    }
+
+    .serverQuestionModal .button {
+        display: flex;
+        justify-content: space-around;
+        flex-wrap: wrap;
+
+    }
+
+    button {
+        color: #fff;
+        background-color: rgb(235, 164, 0);
+        border: 1px solid rgb(235, 164, 0);
+        padding: 10px 29px;
+        margin: 10px;
+        border-radius: 10px;
+    }
+
+    button:hover {
+        background-color: rgb(179, 129, 14);
+        cursor: pointer;
+    }
+
+
+
+    .proccessing {
+        margin: auto;
+        text-align: center;
+        font-size: 21px;
+
+
+        position: relative;
+        top: 50%;
+        padding: 10px;
+        /* left: 50%; */
+        /* margin: -25px 0 0 -25px; */
+    }
+
+    .errmessage {
+        font-size: 19px;
+        color: red;
+        position: relative;
+        top: 20%;
+        padding: 10px;
+
+    }
+
+    p {
+        font-size: 18px;
+    }
+
+    @media (max-width:550px) {
+
+        .serverQuestionModal {
+
+
+            position: fixed;
+            width: 80%;
+            height: auto;
+            padding: 10px;
+            border: 1px solid #fff;
+            background-color: #f4f9ff;
+            top: 30%;
+            left: 50%;
+            margin-top: -100px;
+            margin-left: -40%;
+            z-index: 2;
+            border-radius: 10px;
+
+        }
+
+        .serverQuestionModal h1 {
+            font-size: 20px;
+            text-align: center;
+            color: rgb(235, 164, 0);
+            padding: 4px;
+        }
+
+        .serverQuestionModal .button {
+            display: flex;
+            justify-content: space-around;
+            flex-wrap: wrap;
+
+        }
+
+        button {
+            color: #fff;
+            background-color: rgb(235, 164, 0);
+            border: 1px solid rgb(235, 164, 0);
+            padding: 6px 20px;
+            margin: 10px;
+            border-radius: 10px;
+        }
+
+        button:hover {
+            background-color: rgb(179, 129, 14);
+            cursor: pointer;
+        }
+
+    }
+</style>
+
+<div id="serverQuestionModal" class="serverQuestionModal">
+
+    <h1>Add funds</h1>
+    <p>Please to buy this software you need to add funds to your account click add fund to add fund or click on i
+        have fund to proceed if you have funds</p>
+
+    <div>
+        <input type="text" id="verificationCode" placeholder="Enter verification code">
+
+    </div>
+    <div class="button">
+        <button id="addFund">Verify</button>
+    </div>
+</div>
